@@ -6,51 +6,7 @@ wonder_inner_sanctum = { #Dagoth-Ur
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			OR = {
-				OR = {
-					capital_scope = { province_id = 342 }				#Only active if Red Mountain is the capital.
-					AND = {
-						any_demesne_province = { province_id = 342 }
-						has_game_rule = {
-							name = great_work_limit
-							value = demesne
-						}
-					}
-					has_game_rule = {
-						name = great_work_limit
-						value = any
-					}
-				}
-				any_courtier_or_vassal = { has_minor_title = title_sanctum_keeper } 	#Or the Sanctum Keeper minor title has been given out.
-				AND = {
-					society_member_of = house_dagoth_council
-					is_society_grandmaster = yes
-				}
-			}
-			OR = { #Has to be any group previously known to interact with Heart of Lorkhan
-				AND = {
-#					ai = no #test I hope AI can also easily meet requirements
-					OR = {
-						is_in_society = house_dagoth_council
-						culture = ashlander #needs_change
-						culture = dwemer
-						culture = chimer
-						culture = dunmer
-						religion = sixth_house
-						religion = almsivi
-						is_advanced_ash_creature = yes
-						trait = ambitious
-						trait = brave
-						trait = kind
-						trait = cruel
-					}
-				}
-			}
-		}
-	}
-	
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -107,7 +63,7 @@ wonder_inner_sanctum = { #Dagoth-Ur
 		loot_time = 200
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			battlemages = 25
 		}
@@ -115,7 +71,6 @@ wonder_inner_sanctum = { #Dagoth-Ur
 			monthly_character_prestige = 0.05
 			court_size_modifier = 1
 			tech_growth_modifier = 0.0125
-			demesne_size = 1
 			global_revolt_risk = -0.025
 		}
 	}
@@ -129,7 +84,7 @@ wonder_inner_sanctum = { #Dagoth-Ur
 		loot_time = 200
 		restore_cost_flat = 450
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			battlemages = 25
 		}
@@ -137,7 +92,6 @@ wonder_inner_sanctum = { #Dagoth-Ur
 			monthly_character_prestige = 0.05
 			court_size_modifier = 1
 			tech_growth_modifier = 0.0125
-			demesne_size = 1
 			global_revolt_risk = -0.025
 		}
 	}
@@ -151,7 +105,7 @@ wonder_inner_sanctum = { #Dagoth-Ur
 		loot_time = 200
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			battlemages = 25
 		}
@@ -159,7 +113,6 @@ wonder_inner_sanctum = { #Dagoth-Ur
 			monthly_character_prestige = 0.05
 			court_size_modifier = 1
 			tech_growth_modifier = 0.0125
-			demesne_size = 1
 			global_revolt_risk = -0.025
 		}
 	}
@@ -173,7 +126,7 @@ wonder_inner_sanctum = { #Dagoth-Ur
 		loot_time = 200
 		restore_cost_flat = 550
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			battlemages = 25
 		}
@@ -181,7 +134,6 @@ wonder_inner_sanctum = { #Dagoth-Ur
 			monthly_character_prestige = 0.05
 			court_size_modifier = 1
 			tech_growth_modifier = 0.0125
-			demesne_size = 1
 			global_revolt_risk = -0.025
 		}
 	}

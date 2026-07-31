@@ -6,43 +6,7 @@ wonder_skyforge = { #Now Jorrvaskr
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_skyforge_master }
-					
-					AND = {
-						society_member_of = companions_tamriel
-						is_society_grandmaster = yes
-					}
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -82,7 +46,8 @@ wonder_skyforge = { #Now Jorrvaskr
 		#upgrade_investment_quarry
 	}
 	stage = { #Basic Forge
-		allow = { }
+		allow = {
+		}
 		build_time = 360
 		gold_cost_flat = 600
 		gold_cost_ticking = 2
@@ -90,7 +55,7 @@ wonder_skyforge = { #Now Jorrvaskr
 		loot_time = 20
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.01
 			heavy_infantry = 15
@@ -113,7 +78,7 @@ wonder_skyforge = { #Now Jorrvaskr
 		loot_time = 20
 		restore_cost_flat = 450
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.0125
 			heavy_infantry = 30
@@ -135,7 +100,7 @@ wonder_skyforge = { #Now Jorrvaskr
 		loot_time = 10
 		restore_cost_flat = 500
 		restore_cost_ticking = 5
-		upgrade_slots = 3
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.0125
 			heavy_infantry = 45
@@ -163,7 +128,7 @@ wonder_skyforge = { #Now Jorrvaskr
 			heavy_infantry = 60
 		}
 		owner_modifier = {
-			monthly_character_prestige = 0.05
+			monthly_character_prestige = 0.20
 			court_size_modifier = 4
 			drunkard_opinion = 4
 			nord_opinion = 4
@@ -180,38 +145,7 @@ wonder_senchal = { #Great Ports of Senchal
 		FROMFROMFROM = { is_coastal = yes }
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_portmaster_senchal }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -266,10 +200,10 @@ wonder_senchal = { #Great Ports of Senchal
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.10
-			tradevalue = 30
+			tradevalue = 20
 			tech_growth_modifier = 0.01
 		}
 		owner_modifier = {
@@ -287,10 +221,10 @@ wonder_senchal = { #Great Ports of Senchal
 		loot_time = 15
 		restore_cost_flat = 750
 		restore_cost_ticking = 5
-		upgrade_slots = 3
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.20
-			tradevalue = 35
+			tradevalue = 20
 			tech_growth_modifier = 0.025
 		}
 		owner_modifier = {
@@ -311,7 +245,7 @@ wonder_senchal = { #Great Ports of Senchal
 		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.30
-			tradevalue = 40
+			tradevalue = 20
 			tech_growth_modifier = 0.04
 		}
 		owner_modifier = {
@@ -332,7 +266,7 @@ wonder_senchal = { #Great Ports of Senchal
 		upgrade_slots = 5
 		local_modifier = {
 			local_tax_modifier = 0.40
-			tradevalue = 50
+			tradevalue = 20
 			tech_growth_modifier = 0.05
 		}
 		owner_modifier = {
@@ -349,37 +283,7 @@ wonder_mane_palace = { #Palace of the Mane
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -436,7 +340,7 @@ wonder_mane_palace = { #Palace of the Mane
 		loot_time = 20
 		restore_cost_flat = 600
 		restore_cost_ticking = 3
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.05
 			tech_growth_modifier_culture = 0.02
@@ -457,7 +361,7 @@ wonder_mane_palace = { #Palace of the Mane
 		loot_time = 15
 		restore_cost_flat = 900
 		restore_cost_ticking = 5
-		upgrade_slots = 3
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.10
 			tech_growth_modifier_culture = 0.03
@@ -499,7 +403,7 @@ wonder_mane_palace = { #Palace of the Mane
 		loot_time = 6
 		restore_cost_flat = 1500
 		restore_cost_ticking = 10
-		upgrade_slots = 5
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.20
 			tech_growth_modifier_culture = 0.08
@@ -519,38 +423,7 @@ wonder_palace_of_kings = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_pok_custodian }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -604,16 +477,15 @@ wonder_palace_of_kings = {
     	loot_time = 20
     	restore_cost_flat = 500
     	restore_cost_ticking = 3
-    	upgrade_slots = 2 
+    	upgrade_slots = 4 
     	local_modifier = {
         	tech_growth_modifier_military = 0.05
         	supply_limit = 2
     	}
     	owner_modifier = {
-        	retinuesize = 200 
+			retinuesize = 250
         	monthly_character_prestige = 0.15
         	court_size_modifier = 3
-        	land_morale = 0.05
     	}
 	}
 	stage = { #moot hall
@@ -626,16 +498,15 @@ wonder_palace_of_kings = {
     	loot_time = 15
     	restore_cost_flat = 750
     	restore_cost_ticking = 5
-    	upgrade_slots = 3
+    	upgrade_slots = 4
     	local_modifier = {
         	tech_growth_modifier_military = 0.10
         	supply_limit = 3
     	}
     	owner_modifier = {
-        	retinuesize = 400 
-        	monthly_character_prestige = 0.25
+			retinuesize = 250
+        	monthly_character_prestige = 0.1
         	court_size_maintenance_cost_modifier = -0.10
-        	land_morale = 0.10
     	}
 	}
 	stage = { #high kings citadel
@@ -654,10 +525,9 @@ wonder_palace_of_kings = {
         	supply_limit = 4
     	}
     	owner_modifier = {
-        	retinuesize = 600
-        	monthly_character_prestige = 0.35
+			retinuesize = 250
+	      	monthly_character_prestige = 0.1
         	court_size_modifier = 5
-        	land_morale = 0.15
     	}
 	}
 	stage = { #palace of kings
@@ -676,10 +546,10 @@ wonder_palace_of_kings = {
         	supply_limit = 5
     	}
     	owner_modifier = {
-        	retinuesize = 800
-        	monthly_character_prestige = 0.50
+    		retinuesize_perc = 0.3
+        	monthly_character_prestige = 0.10
         	court_size_maintenance_cost_modifier = -0.20
-        	land_morale = 0.20
+        	land_morale = 0.1
         	norse_opinion = 25
 		}
 	}
@@ -692,38 +562,7 @@ wonder_imperial_city = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_ic_custodian }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		is_destructible
@@ -783,18 +622,16 @@ wonder_imperial_city = {
     	loot_time = 30
     	restore_cost_flat = 1500
     	restore_cost_ticking = 5
-    	upgrade_slots = 3
+    	upgrade_slots = 4
     	local_modifier = {
         	local_tax_modifier = 0.10
-        	tradevalue = 50
+        	tradevalue = 15
         	tech_growth_modifier = 0.03
     	}
     	owner_modifier = {
         	monthly_character_prestige = 0.15
-        	demesne_size = 1
-        	culture_flex = -0.05 
-        	religion_flex = -0.05
-        	global_levy_size = 0.05
+        	culture_flex = -0.125
+			religion_flex = -0.125
         	global_trade_income = 0.10
 		}
 	}
@@ -811,13 +648,14 @@ wonder_imperial_city = {
     	upgrade_slots = 4
     	local_modifier = {
         	local_tax_modifier = 0.1
-        	tradevalue = 65
+        	tradevalue = 15
         	tech_growth_modifier = 0.05
     	}
     	owner_modifier = {
         	monthly_character_prestige = 0.25
-        	demesne_size = 2
         	global_trade_income = 0.15
+        	culture_flex = -0.125
+			religion_flex = -0.125
         	vassal_limit = 2
 		}
 	}
@@ -832,17 +670,16 @@ wonder_imperial_city = {
 		loot_time = 20
 		restore_cost_flat = 3000
 		restore_cost_ticking = 10
-		upgrade_slots = 5
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.20
-			tradevalue = 75
+			tradevalue = 15
 			tech_growth_modifier = 0.07
 		}
 		owner_modifier = {
 			monthly_character_prestige = 0.35
-			demesne_size = 3
-			culture_flex = -0.025
-			religion_flex = -0.025
+			culture_flex = -0.125
+			religion_flex = -0.125
 			vassal_limit = 3
 		}
 	}
@@ -859,14 +696,13 @@ wonder_imperial_city = {
 		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
-			tradevalue = 85
+			tradevalue = 15
 			tech_growth_modifier = 0.01
 		}
 		owner_modifier = {
 			monthly_character_prestige = 0.50
-			demesne_size = 3
-			culture_flex = -0.050
-			religion_flex = -0.050
+			culture_flex = -0.125
+			religion_flex = -0.125
 			vassal_limit = 4
 		}
 	}
@@ -879,38 +715,7 @@ wonder_understone = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_guardian_of_the_deep }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		defensive
@@ -965,7 +770,7 @@ wonder_understone = {
 		loot_time = 200
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			siege_defence = 0.025
 			local_tax_modifier = 0.01
@@ -987,7 +792,7 @@ wonder_understone = {
 		loot_time = 200
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			siege_defence = 0.025
 			local_tax_modifier = 0.01
@@ -1009,7 +814,7 @@ wonder_understone = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			siege_defence = 0.025
 			local_tax_modifier = 0.01
@@ -1031,7 +836,7 @@ wonder_understone = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			siege_defence = 0.025
 			local_tax_modifier = 0.01
@@ -1054,38 +859,7 @@ wonder_jylkurfyk = {
 		FROMFROMFROM = { is_coastal = yes }
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_master_shipwright_jyl }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		defensive
@@ -1137,7 +911,7 @@ wonder_jylkurfyk = {
 		loot_time = 100
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			galleys = 15
 			tradevalue = 12
@@ -1159,7 +933,7 @@ wonder_jylkurfyk = {
 		loot_time = 100
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			galleys = 15
 			tradevalue = 12
@@ -1181,7 +955,7 @@ wonder_jylkurfyk = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			galleys = 20
 			tradevalue = 12
@@ -1203,7 +977,7 @@ wonder_jylkurfyk = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			galleys = 25
 			tradevalue = 12
@@ -1224,38 +998,7 @@ wonder_motalion = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_motalion_overseer }
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		burial_ground
@@ -1312,7 +1055,7 @@ wonder_motalion = {
 		loot_time = 100
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			culture_techpoints = 0.025
 			local_revolt_risk = -0.01
@@ -1334,7 +1077,7 @@ wonder_motalion = {
 		loot_time = 100
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			culture_techpoints = 0.025
 			local_revolt_risk = -0.005
@@ -1356,7 +1099,7 @@ wonder_motalion = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			culture_techpoints = 0.025
 			local_revolt_risk = -0.005
@@ -1378,7 +1121,7 @@ wonder_motalion = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			culture_techpoints = 0.025
 			local_revolt_risk = -0.01
@@ -1400,51 +1143,7 @@ wonder_temple_orgnum = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_sacristan_orgnum }
-					
-					trigger_if = {
-						limit = { character = 39000 }
-						
-						custom_tooltip = {
-							text = NAMED_GOD_EMPEROR_CT
-							AND = {
-								character = 39000
-								has_global_flag = orgnum_god_emperor
-								real_tier = EMPEROR
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		burial_ground
@@ -1495,7 +1194,7 @@ wonder_temple_orgnum = {
 		loot_time = 100
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
 			local_revolt_risk = -0.01
@@ -1515,7 +1214,7 @@ wonder_temple_orgnum = {
 		loot_time = 100
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
 			local_revolt_risk = -0.01
@@ -1536,7 +1235,7 @@ wonder_temple_orgnum = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
 			local_revolt_risk = -0.015
@@ -1556,7 +1255,7 @@ wonder_temple_orgnum = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
 			local_revolt_risk = -0.015
@@ -1577,45 +1276,7 @@ wonder_cath_bedraud = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_sexton_cath_bedraud }
-					
-					### High Rock is primary title/Emperor and holds High Rock
-					primary_title = { title = k_highrock }
-					AND = {
-						real_tier = EMPEROR
-						any_demesne_title = { title = k_highrock }
-					}
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		burial_ground
@@ -1665,7 +1326,7 @@ wonder_cath_bedraud = {
 		loot_time = 100
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.01
 		}
@@ -1684,7 +1345,7 @@ wonder_cath_bedraud = {
 		loot_time = 100
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			culture_techpoints = 0.025
 			local_revolt_risk = -0.005
@@ -1704,7 +1365,7 @@ wonder_cath_bedraud = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.01
 		}
@@ -1723,7 +1384,7 @@ wonder_cath_bedraud = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.025
 			local_revolt_risk = -0.01
@@ -1743,45 +1404,7 @@ wonder_menagerie_silvarwoad = {
 	potential = {
 		always = no
 	}
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_zookeeper_silvarwoad }
-				
-					### Alinor is primary title/Emperor and holds Alinor
-					primary_title = { title = k_summerset }
-					AND = {
-						real_tier = EMPEROR
-						any_demesne_title = { title = k_summerset }
-					}
-				}
-			}
-		}
-	}
+	active = {}
 	flags = {
 		is_historical
 		inspires_relaxing
@@ -1833,7 +1456,7 @@ wonder_menagerie_silvarwoad = {
 		loot_time = 100
 		restore_cost_flat = 400
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.01
 			culture_techpoints = 0.025	
@@ -1852,7 +1475,7 @@ wonder_menagerie_silvarwoad = {
 		loot_time = 100
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.05
 			culture_techpoints = 0.025	
@@ -1871,7 +1494,7 @@ wonder_menagerie_silvarwoad = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_revolt_risk = -0.01
 			culture_techpoints = 0.025	
@@ -1890,7 +1513,7 @@ wonder_menagerie_silvarwoad = {
 		loot_time = 20
 		restore_cost_flat = 500
 		restore_cost_ticking = 2
-		upgrade_slots = 2
+		upgrade_slots = 4
 		local_modifier = {
 			local_tax_modifier = 0.05
 			culture_techpoints = 0.025	
@@ -1911,38 +1534,7 @@ wonder_volwesi = {
 		always = no
 	}
 
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_volwesi_governor }
-				}
-			}
-		}
-	}
+	active = {}
 
 	flags = {
 		is_historical
@@ -2015,9 +1607,6 @@ wonder_volwesi = {
 		}
 		owner_modifier = {
 			monthly_character_prestige = 0.1
-			levy_size = 0.05
-			demesne_size = 1
-			global_levy_size = 0.01
 		}
 	}
 	stage = {
@@ -2038,9 +1627,6 @@ wonder_volwesi = {
 		}
 		owner_modifier = {
 			monthly_character_prestige = 0.1
-			levy_size = 0.05
-			demesne_size = 1
-			global_levy_size = 0.01
 		}
 	}
 	stage = {
@@ -2062,8 +1648,6 @@ wonder_volwesi = {
 		owner_modifier = {
 			monthly_character_prestige = 0.1
 			levy_size = 0.05
-			demesne_size = 1
-			global_levy_size = 0.01
 		}
 	}
 	stage = {
@@ -2084,10 +1668,7 @@ wonder_volwesi = {
 		}
 		owner_modifier = {
 			monthly_character_prestige = 0.1
-			levy_size = 0.05
 			vassal_opinion = 3
-			demesne_size = 1
-			global_levy_size = 0.01
 		}
 	}
 }
@@ -2102,38 +1683,7 @@ wonder_clockworkcity = {
 		always = no
 	}
 
-	active = {
-		ROOT = {
-			trigger_if = {
-				limit = { has_game_rule = { name = great_work_limit value = any } }
-				has_game_rule = { name = great_work_limit value = any }
-			}
-			
-			trigger_else = {
-				OR = {
-					trigger_if = {
-						limit = { has_game_rule = { name = great_work_limit value = capital } }
-						has_game_rule = { name = great_work_limit value = capital }
-						custom_tooltip = {
-							text = WONDER_IN_CAPITAL_CT
-							FROMFROM = { location = { ROOT = { capital_scope = { province = PREVPREV } } } }
-						}
-					}
-					
-					trigger_else_if = {
-						limit = { has_game_rule = { name = great_work_limit value = demesne } }
-						has_game_rule = { name = great_work_limit value = demesne }
-						custom_tooltip = {
-							text = WONDER_IN_DEMESNE_CT
-							FROMFROM = { location = { ROOT = { any_demesne_province = { province = PREVPREV } } } }
-						}
-					}
-					
-					any_courtier_or_vassal = { has_minor_title = title_volwesi_governor }
-				}
-			}
-		}
-	}
+	active = {}
 
 	flags = {
 		is_historical
