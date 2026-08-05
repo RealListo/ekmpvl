@@ -1172,54 +1172,6 @@ assign_orientation_after_birthsex = {
 	remove_trait = bisexual
 }
 
-swap_character_sex = { #Sets gender to opposite, fires rename event, swaps gendered versions of traits
-	set_gender = opposite
-	character_event = { id = eksexuality.21 }
-	if = {
-		limit = {
-			trait = seducer
-		}
-		remove_trait = seducer
-		add_trait = seductress
-	}
-	else_if = {
-		limit = {
-			trait = seductress
-		}
-		remove_trait = seductress
-		add_trait = seducer
-	}
-	if = {
-		limit = {
-			trait = monk
-		}
-		remove_trait = monk
-		add_trait = nun
-	}
-	else_if = {
-		limit = {
-			trait = nun
-		}
-		remove_trait = nun
-		add_trait = monk
-	}
-	if = { #Swapping genders does not inherently change who your character is attracted to, but this has a lot of implications for various WIP events.
-		limit = {
-			trait = homosexual
-		}
-		remove_trait = homosexual
-	}
-	else_if = {
-		limit = {
-			NOT = { trait = homosexual }
-		}
-		add_trait = homosexual
-	}
-	
-	# Some special titles depend on the character's gender
-	update_special_character_title = yes
-}
-
 ### Special titles
 ## Faolan/Melka special title
 # Both genders get the current_faolan flag, because it's not shown.
