@@ -1,5 +1,5 @@
-### Elder Kings: VL ###
-Checksum: CVWG
+### Elder Kings: MPVL ###
+Checksum: 
 
 
 Thank you.
