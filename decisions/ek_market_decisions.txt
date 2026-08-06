@@ -689,3 +689,4 @@ decisions = { #Alchemy - Giving it its own block for nesting purposes. When addi
 			swap_character_sex = yes
 		}
 	}
+}
