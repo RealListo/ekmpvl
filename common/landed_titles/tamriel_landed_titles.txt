@@ -11365,6 +11365,26 @@ e_dunmer = {
 				b_salothran = {}
 			}
 		}
+		d_redmountain = {
+			color = { 130 0 70 }
+			color2 = { 255 255 255 }
+			capital = 342
+			dynasty_title_names = no
+
+			chimer = "Red Mountain"
+
+			c_redmountain = {
+				color = { 130 0 70 }
+				color2 = { 255 255 255 }
+				
+				b_dagothur = {}
+				b_endusal = {}
+				b_odrosal = {}
+				b_tureynulal = {}
+				b_vemynal = {}
+				b_bthanchend  = {}
+			}
+		}
 	}
 	
 	k_ashlands = {
