@@ -1,5 +1,5 @@
 name="Elder Kings: MPVL"
-archive="mod/ekmpvl"
+archive="mod/ekmpvl-main"
 replace_path="common"
 replace_path="common/alternate_start"
 replace_path="common/artifacts"
