@@ -1,5 +1,5 @@
 ### Elder Kings: MPVL ###
-Checksum: 
+Checksum: PKXW
 
 
 Thank you.
@@ -15,6 +15,6 @@ This release is compatible with Crusader Kings II version 3.3.X.
    - Rename and move the `.mod` file to `Crusader Kings II\mod`.
 4. Enable the mod in the Launcher.
 
-- The EK:VL Team
+- The MPVL Team
 
 Full credits are available in `credits.txt`.
