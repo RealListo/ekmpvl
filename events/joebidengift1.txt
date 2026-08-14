@@ -1,0 +1,44 @@
+namespace = gift_troops_ai
+character_event = {
+	id = gift_troops_ai.0
+	desc = EVTDESCgift_troops_ai.0
+	picture = GFX_evt_council
+	is_triggered_only = yes
+
+	option = {
+	 name = EVTOPTAgift_troops_ai.0
+	 trigger = {
+			OR = { wealth = 100 }
+		}
+		allow = {
+			FROM = { wealth = 100 }
+			ROOT = { wealth = -100 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTBgift_troops_ai.0
+		trigger = {
+			OR = { wealth = 200}
+		}
+		allow = {
+			FROM = { wealth = 200 }
+			ROOT = { wealth = -200 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTCgift_troops_ai.0
+		trigger = {
+			OR = { wealth = 400 }
+		}
+		allow = {
+			FROM = { wealth = 400 }
+			ROOT = { wealth = -400 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTDgift_troops_ai.0
+	}
+}
