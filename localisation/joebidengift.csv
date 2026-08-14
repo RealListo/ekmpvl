@@ -1,0 +1,14 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+player_gift_troops;Stimulus Check;;;;;;;;;;;;;x
+player_gift_troops_desc;Give a handout.;;;;;;;;;;;;;x
+EVTDESCgift_troops_ai.0;[From.GetBestName] Give a Custom sum of money.;;;;;;;;;;;;;x
+EVTOPTAgift_troops_ai.0;Gift 100 Gold;;;;;;;;;;;;;x
+EVTOPTBgift_troops_ai.0;Gift 200 Gold;;;;;;;;;;;;;x
+EVTOPTCgift_troops_ai.0;Gift 400 Gold;;;;;;;;;;;;;x
+EVTOPTDgift_troops_ai.0;EXIT;;;;;;;;;;;;;x
+EVTDESCgift_troops_ai.1;[From.GetBestName] has given you a gift of money.;;;;;;;;;;;;;x
+EVTOPTEgift_troops_ai.1;Gift 500 Gold;;;;;;;;;;;;;x
+EVTOPTFgift_troops_ai.1;Gift 1000 Gold;;;;;;;;;;;;;x
+EVTOPTGgift_troops_ai.1;Gift 2000 Gold;;;;;;;;;;;;;x
+EVTOPTHgift_troops_ai.1;EXIT;;;;;;;;;;;;;x
+EVTOPTCgift_troops_ai.1;You are a God!;;;;;;;;;;;;;x
